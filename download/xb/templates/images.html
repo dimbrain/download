@@ -1,0 +1,21 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% if images %}
+        <table>
+            {% for image in images %}
+            <tr>
+                <td>
+                    <a href="{{ image.image_url }}">
+                        <img src="{{ image.get_thumbnail_url }}"/>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <p>No Images</p>
+        {% endif %}
+    </body>
+</html>
